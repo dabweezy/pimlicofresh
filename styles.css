@@ -108,25 +108,20 @@ body {
 .logo {
     display: block;
     text-decoration: none;
-    line-height: 0;
     cursor: pointer;
 }
 
-.logo-img {
-    display: block;
-    height: clamp(1.5rem, 2.5vw, 2rem);
-    width: auto;
-    max-width: 200px;
+.logo-text {
+    font-family: 'Sunny Chunk', display, sans-serif;
+    font-size: clamp(1.5rem, 2.8vw, 2rem);
+    font-weight: normal;
+    color: var(--brand);
+    letter-spacing: 0.02em;
     transition: opacity var(--transition-fast);
 }
 
-.logo:hover .logo-img {
+.logo:hover .logo-text {
     opacity: 0.85;
-}
-
-.logo .logo-path-1,
-.logo .logo-path-2 {
-    fill: var(--brand);
 }
 
 .nav-menu {
@@ -266,11 +261,11 @@ body {
 }
 
 .hero-headline {
-    font-family: 'Outfit', system-ui, sans-serif;
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
-    font-weight: 700;
+    font-family: 'Sunny Chunk', display, sans-serif;
+    font-size: clamp(2.5rem, 5.5vw, 4rem);
+    font-weight: normal;
     line-height: 1.1;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.02em;
     color: var(--brand);
     margin: 0 0 0.5rem 0;
 }
@@ -361,23 +356,24 @@ body {
     background: var(--brand-dark);
 }
 
-/* ----- Value strip (Hero-Centric + Conversion) ----- */
+/* ----- Value strip ----- */
 .value-strip {
     background: var(--brand);
     color: var(--white);
-    padding: 1.25rem 0;
+    padding: 1.5rem 0;
     text-align: center;
 }
 
 .value-strip-text {
-    font-family: 'Outfit', system-ui, sans-serif;
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
-    font-weight: 400;
-    letter-spacing: 0.04em;
+    font-family: 'Sunny Chunk', display, sans-serif;
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+    font-weight: normal;
+    letter-spacing: 0.03em;
     margin: 0;
-    max-width: 56ch;
+    max-width: 52ch;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.4;
 }
 
 /* Nav CTA — sticky conversion */
@@ -398,15 +394,15 @@ body {
     color: var(--white) !important;
 }
 
-/* ----- Section titles — large type 32px+ (Pro Max) ----- */
+/* ----- Section titles (Sunny Chunk to match logo) ----- */
 .section-title {
-    font-family: 'Outfit', system-ui, sans-serif;
-    font-size: clamp(2rem, 4.5vw, 2.75rem);
-    font-weight: 700;
+    font-family: 'Sunny Chunk', display, sans-serif;
+    font-size: clamp(2rem, 4.5vw, 2.85rem);
+    font-weight: normal;
     text-align: center;
     margin-bottom: clamp(2.5rem, 5vw, 4rem);
-    color: var(--brand);
-    letter-spacing: 0.08em;
+    color: inherit;
+    letter-spacing: 0.04em;
     line-height: 1.2;
 }
 
@@ -414,6 +410,10 @@ body {
 .about {
     padding: var(--section-padding) 0;
     background: var(--white);
+}
+
+.about .section-title {
+    color: var(--brand);
 }
 
 /* Scroll reveal (Pro Max) — only when motion allowed */
@@ -437,12 +437,12 @@ body {
 
 .about-text h2 {
     font-family: 'Outfit', system-ui, sans-serif;
-    font-size: clamp(1.85rem, 3.2vw, 2.35rem);
+    font-size: clamp(1.75rem, 3vw, 2.2rem);
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--brand);
-    letter-spacing: 0.03em;
-    line-height: 1.25;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    line-height: 1.3;
 }
 
 .about-text p {
@@ -454,21 +454,22 @@ body {
 }
 
 .quality-tagline {
-    font-family: 'DM Sans', system-ui, sans-serif;
-    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
-    font-weight: 600;
+    font-family: 'Sunny Chunk', display, sans-serif;
+    font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+    font-weight: normal;
     color: var(--brand);
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.06em;
     margin-top: 1.75rem;
-    padding: 0.65rem 1.25rem;
+    padding: 0.6rem 1.35rem;
     background: var(--cream);
-    border-radius: var(--radius);
+    border-radius: var(--radius-full);
     display: inline-block;
 }
 
 .about-image {
     position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
 }
 
 .about-photo {
@@ -496,9 +497,9 @@ body {
     width: 100%;
     height: 240px;
     object-fit: cover;
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
-    transition: transform var(--transition);
+    transition: transform 0.25s var(--ease-out);
 }
 
 .about-gallery-img:hover {
@@ -508,28 +509,29 @@ body {
 /* ----- Gallery ----- */
 .gallery {
     padding: var(--section-padding) 0;
-    background: var(--gray-light);
+    background: var(--cream);
 }
 
 .gallery .section-title {
+    color: var(--brand);
     margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .gallery-item {
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
-    transition: transform var(--transition), box-shadow var(--transition);
+    transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
 }
 
 .gallery-item:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
     box-shadow: var(--shadow);
 }
 
@@ -540,7 +542,6 @@ body {
     display: block;
 }
 
-/* Bento-style: first image larger */
 .gallery-item:first-child {
     grid-column: span 2;
     grid-row: span 2;
@@ -557,6 +558,10 @@ body {
     background: var(--white);
 }
 
+.menu .section-title {
+    color: var(--brand);
+}
+
 .menu-category {
     margin-bottom: clamp(3rem, 5vw, 4.5rem);
 }
@@ -566,15 +571,14 @@ body {
 }
 
 .menu-category h3 {
-    font-family: 'Outfit', system-ui, sans-serif;
-    font-size: clamp(1.2rem, 1.9vw, 1.4rem);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+    font-family: 'Sunny Chunk', display, sans-serif;
+    font-size: clamp(1.35rem, 2vw, 1.6rem);
+    font-weight: normal;
+    margin-bottom: 1.25rem;
     color: var(--brand);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding-bottom: 0.65rem;
-    border-bottom: 2px solid var(--gray);
+    letter-spacing: 0.04em;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--cream);
 }
 
 .menu-items {
@@ -589,8 +593,8 @@ body {
     align-items: flex-start;
     background: var(--white);
     padding: 1.5rem;
-    border-radius: var(--radius);
-    border: 1px solid rgba(23, 41, 149, 0.06);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(23, 41, 149, 0.08);
     box-shadow: var(--shadow-sm);
     transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
 }
@@ -598,7 +602,7 @@ body {
 .menu-item:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow);
-    border-color: rgba(23, 41, 149, 0.18);
+    border-color: rgba(23, 41, 149, 0.15);
 }
 
 .menu-item-img {
@@ -606,8 +610,8 @@ body {
     min-width: 100px;
     height: 100px;
     object-fit: cover;
-    border-radius: var(--radius-sm);
-    background: var(--gray-light);
+    border-radius: var(--radius);
+    background: var(--cream);
 }
 
 .menu-item-img--missing {
@@ -633,8 +637,8 @@ body {
 .menu-item h4 {
     font-family: 'Outfit', system-ui, sans-serif;
     font-size: clamp(1rem, 1.2vw, 1.1rem);
-    font-weight: 700;
-    color: var(--brand);
+    font-weight: 600;
+    color: var(--ink);
     letter-spacing: 0.02em;
     margin: 0;
     flex: 1;
@@ -670,7 +674,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.03) 0%, transparent 50%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.04) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -693,9 +697,9 @@ body {
     color: var(--brand);
     padding: 1.75rem;
     text-align: center;
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
-    transition: transform var(--transition), box-shadow var(--transition);
+    transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
 }
 
 .hours-item:hover {
@@ -704,14 +708,13 @@ body {
 }
 
 .hours-item .day {
-    font-family: 'Outfit', system-ui, sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin-bottom: 0.6rem;
+    font-family: 'Sunny Chunk', display, sans-serif;
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    font-weight: normal;
+    margin-bottom: 0.5rem;
     color: var(--brand);
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    padding-bottom: 0.6rem;
+    letter-spacing: 0.04em;
+    padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--gray);
 }
 
@@ -727,6 +730,10 @@ body {
 .contact {
     padding: var(--section-padding) 0;
     background: var(--cream);
+}
+
+.contact .section-title {
+    color: var(--brand);
 }
 
 .contact-photos {
@@ -764,10 +771,10 @@ body {
 .contact-item {
     background: var(--white);
     padding: 1.75rem;
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     border: 1px solid rgba(23, 41, 149, 0.06);
     box-shadow: var(--shadow-sm);
-    transition: transform var(--transition), box-shadow var(--transition);
+    transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
 }
 
 .contact-item:hover {
@@ -776,15 +783,14 @@ body {
 }
 
 .contact-item h3 {
-    font-family: 'Outfit', system-ui, sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-family: 'Sunny Chunk', display, sans-serif;
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    font-weight: normal;
     margin-bottom: 0.75rem;
     color: var(--brand);
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    padding-bottom: 0.6rem;
-    border-bottom: 2px solid var(--gray);
+    letter-spacing: 0.04em;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--cream);
 }
 
 .contact-item p {
@@ -813,16 +819,31 @@ body {
 .footer {
     background: var(--brand);
     color: var(--white);
-    padding: clamp(1.75rem, 3vw, 2.5rem) 0;
+    padding: clamp(2rem, 4vw, 3rem) 0;
     text-align: center;
 }
 
 .footer p {
     font-family: 'DM Sans', system-ui, sans-serif;
-    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
-    letter-spacing: 0.08em;
+    font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+    letter-spacing: 0.06em;
     font-weight: 500;
-    opacity: 0.92;
+    opacity: 0.95;
+}
+
+.footer .footer-logo {
+    font-size: 1.05em;
+    opacity: 1;
+}
+
+.footer-logo {
+    font-family: 'Sunny Chunk', display, sans-serif;
+    font-weight: normal;
+}
+
+.brand-name {
+    font-family: 'Sunny Chunk', display, sans-serif;
+    font-weight: normal;
 }
 
 /* ----- Responsive ----- */
@@ -945,9 +966,8 @@ body {
         text-align: center;
     }
 
-    .logo .logo-img {
-        height: 1.5rem;
-        max-width: 160px;
+    .logo-text {
+        font-size: 1.4rem;
     }
 
     .hero-tagline {
