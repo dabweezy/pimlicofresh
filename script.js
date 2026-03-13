@@ -36,12 +36,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Header scroll effect: add .scrolled for shadow (CSS handles style)
+// Header: show only after scrolling past hero; add .scrolled for shadow when visible
 var header = document.querySelector('.header');
-if (header) {
-    window.addEventListener('scroll', function () {
-        header.classList.toggle('scrolled', window.pageYOffset > 20);
-    });
+var heroSection = document.querySelector('.hero');
+if (header && heroSection) {
+    function updateHeader() {
+        var pastHero = window.pageYOffset > heroSection.offsetHeight;
+        header.classList.toggle('past-hero', pastHero);
+        header.classList.toggle('scrolled', pastHero && window.pageYOffset > heroSection.offsetHeight + 20);
+    }
+    updateHeader();
+    window.addEventListener('scroll', updateHeader);
 }
 
 // Mobile menu toggle
@@ -61,62 +66,6 @@ if (navToggle && navMenu) {
         });
     });
 }
-
-// Gallery slideshow
-(function () {
-    var track = document.getElementById('gallery-track');
-    var prevBtn = document.getElementById('gallery-prev');
-    var nextBtn = document.getElementById('gallery-next');
-    var dotsEl = document.getElementById('gallery-dots');
-    if (!track || !dotsEl) return;
-
-    var slides = track.querySelectorAll('.gallery-slide');
-    var total = slides.length;
-    var index = 0;
-    var autoplayMs = 5000;
-    var autoplayTimer = null;
-
-    function goTo(i) {
-        index = (i + total) % total;
-        track.style.transform = 'translateX(-' + index + '00%)';
-        dotsEl.querySelectorAll('.gallery-dot').forEach(function (dot, j) {
-            dot.classList.toggle('is-active', j === index);
-            dot.setAttribute('aria-current', j === index ? 'true' : 'false');
-        });
-    }
-
-    function startAutoplay() {
-        stopAutoplay();
-        autoplayTimer = setInterval(function () { goTo(index + 1); }, autoplayMs);
-    }
-    function stopAutoplay() {
-        if (autoplayTimer) clearInterval(autoplayTimer);
-        autoplayTimer = null;
-    }
-
-    slides.forEach(function (_, i) {
-        var dot = document.createElement('button');
-        dot.type = 'button';
-        dot.className = 'gallery-dot' + (i === 0 ? ' is-active' : '');
-        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        dot.setAttribute('aria-current', i === 0 ? 'true' : 'false');
-        dot.addEventListener('click', function () {
-            goTo(i);
-            startAutoplay();
-        });
-        dotsEl.appendChild(dot);
-    });
-
-    if (prevBtn) prevBtn.addEventListener('click', function () { goTo(index - 1); startAutoplay(); });
-    if (nextBtn) nextBtn.addEventListener('click', function () { goTo(index + 1); startAutoplay(); });
-
-    track.parentElement.addEventListener('mouseenter', stopAutoplay);
-    track.parentElement.addEventListener('mouseleave', startAutoplay);
-
-    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReducedMotion) startAutoplay();
-    goTo(0);
-})();
 
 // Scroll-triggered reveal (Pro Max: scroll reveal). Respect prefers-reduced-motion.
 var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

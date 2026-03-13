@@ -38,6 +38,7 @@
                 <span class="hero-overlay"></span>
             </div>
             <div class="hero-inner">
+                <p class="hero-logo" aria-hidden="true">Pimlico Fresh</p>
                 <p class="hero-meta">Pimlico, London · Est. 1995</p>
                 <h1 class="hero-title">Pimlico Fresh</h1>
                 <p class="hero-tagline">Café & Kitchen</p>
@@ -90,33 +91,24 @@
             </div>
         </section>
 
-        <!-- Gallery slideshow -->
+        <!-- Expandable gallery (hover to expand) -->
         <section class="gallery-section" aria-label="Gallery">
-            <div class="gallery-slideshow">
-                <div class="gallery-track" id="gallery-track">
-                    <div class="gallery-slide">
-                        <img src="assets/storefront-street.png" alt="Pimlico Fresh street view" loading="lazy">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="assets/interior.png" alt="Café interior" loading="lazy">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="assets/coffee-counter.png" alt="Coffee bar" loading="lazy">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="assets/takeaway.png" alt="Takeaway and branded goods" loading="lazy">
-                    </div>
-                    <div class="gallery-slide">
-                        <img src="assets/merchandise.png" alt="Pimlico Fresh merchandise" loading="lazy">
-                    </div>
+            <div class="expandable-gallery">
+                <div class="expandable-gallery__item">
+                    <img src="assets/storefront-street.png" alt="Pimlico Fresh street view" loading="lazy">
                 </div>
-                <button type="button" class="gallery-btn gallery-btn--prev" aria-label="Previous slide" id="gallery-prev">
-                    <span aria-hidden="true">&larr;</span>
-                </button>
-                <button type="button" class="gallery-btn gallery-btn--next" aria-label="Next slide" id="gallery-next">
-                    <span aria-hidden="true">&rarr;</span>
-                </button>
-                <div class="gallery-dots" id="gallery-dots" aria-label="Slide navigation"></div>
+                <div class="expandable-gallery__item">
+                    <img src="assets/interior.png" alt="Café interior" loading="lazy">
+                </div>
+                <div class="expandable-gallery__item">
+                    <img src="assets/coffee-counter.png" alt="Coffee bar" loading="lazy">
+                </div>
+                <div class="expandable-gallery__item">
+                    <img src="assets/takeaway.png" alt="Takeaway and branded goods" loading="lazy">
+                </div>
+                <div class="expandable-gallery__item">
+                    <img src="assets/merchandise.png" alt="Pimlico Fresh merchandise" loading="lazy">
+                </div>
             </div>
         </section>
 

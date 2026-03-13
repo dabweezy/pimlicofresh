@@ -54,7 +54,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ----- Header ----- */
+/* ----- Header (visible only after scrolling past hero) ----- */
 .header {
     position: fixed;
     top: 0;
@@ -65,10 +65,17 @@ body {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(23, 41, 149, 0.06);
-    transition: box-shadow var(--transition);
+    transition: transform 0.35s ease, box-shadow var(--transition);
+    transform: translateY(-100%);
+    pointer-events: none;
 }
 
-.header.scrolled {
+.header.past-hero {
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.header.past-hero.scrolled {
     box-shadow: var(--shadow);
 }
 
@@ -242,6 +249,17 @@ body {
     z-index: 1;
     padding: clamp(5rem, 12vw, 8rem) clamp(1.5rem, 5vw, 3rem);
     max-width: 42rem;
+}
+
+.hero-logo {
+    font-family: 'Sunny Chunk', display, sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0 0 0.5rem 0;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.15);
 }
 
 .hero-meta {
@@ -508,102 +526,51 @@ body {
     min-height: 320px;
 }
 
-/* Gallery slideshow */
+/* Expandable gallery (Inspira-style: hover to expand) */
 .gallery-section {
     padding: 0;
     background: var(--cream);
 }
 
-.gallery-slideshow {
-    position: relative;
+.expandable-gallery {
+    display: flex;
     max-width: var(--wrap);
     margin: 0 auto;
+    min-height: 42vh;
     overflow: hidden;
-    border-radius: 0;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
 }
 
-.gallery-track {
-    display: flex;
-    transition: transform var(--transition);
-    will-change: transform;
-}
-
-.gallery-slide {
-    flex: 0 0 100%;
+.expandable-gallery__item {
+    flex: 1 1 0;
     min-width: 0;
+    overflow: hidden;
+    transition: flex 600ms cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
 }
 
-.gallery-slide img {
+.expandable-gallery__item:hover,
+.expandable-gallery__item:focus-within {
+    flex: 3 1 0;
+}
+
+.expandable-gallery:hover .expandable-gallery__item:not(:hover):not(:focus-within) {
+    flex: 0.6 1 0;
+}
+
+.expandable-gallery__item img {
     width: 100%;
-    height: auto;
-    max-height: 70vh;
+    height: 100%;
+    min-height: 42vh;
     object-fit: cover;
     object-position: center;
     display: block;
+    transition: opacity 400ms ease;
 }
 
-.gallery-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3rem;
-    height: 3rem;
-    border: none;
-    border-radius: var(--radius-full);
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--brand);
-    font-size: 1.25rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow);
-    transition: background var(--transition), transform var(--transition);
-    z-index: 2;
-}
-
-.gallery-btn:hover,
-.gallery-btn:focus-visible {
-    background: var(--white);
-    transform: translateY(-50%) scale(1.05);
-}
-
-.gallery-btn--prev {
-    left: 1rem;
-}
-
-.gallery-btn--next {
-    right: 1rem;
-}
-
-.gallery-dots {
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
-    z-index: 2;
-}
-
-.gallery-dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: var(--radius-full);
-    border: none;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    padding: 0;
-    transition: background var(--transition), transform var(--transition);
-}
-
-.gallery-dot:hover {
-    background: rgba(255, 255, 255, 0.8);
-}
-
-.gallery-dot.is-active {
-    background: var(--white);
-    transform: scale(1.2);
+.expandable-gallery:hover .expandable-gallery__item:not(:hover):not(:focus-within) img {
+    opacity: 0.75;
 }
 
 /* Menu bento */
@@ -928,22 +895,17 @@ body {
         text-align: center;
     }
 
-    .gallery-btn {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1rem;
+    .expandable-gallery {
+        min-height: 36vh;
     }
 
-    .gallery-btn--prev {
-        left: 0.75rem;
+    .expandable-gallery__item img {
+        min-height: 36vh;
     }
 
-    .gallery-btn--next {
-        right: 0.75rem;
-    }
-
-    .gallery-dots {
-        bottom: 0.75rem;
+    .expandable-gallery__item:hover,
+    .expandable-gallery__item:focus-within {
+        flex: 2.2 1 0;
     }
 }
 
@@ -985,6 +947,18 @@ body {
     .bento-card:hover,
     .menu-category:hover {
         transform: none;
+    }
+
+    .expandable-gallery__item {
+        transition: none;
+    }
+
+    .expandable-gallery:hover .expandable-gallery__item:not(:hover):not(:focus-within) {
+        flex: 1 1 0;
+    }
+
+    .expandable-gallery:hover .expandable-gallery__item:not(:hover):not(:focus-within) img {
+        opacity: 1;
     }
 
     .reveal {
