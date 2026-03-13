@@ -17,9 +17,7 @@
                     <span class="logo-text">Pimlico Fresh</span>
                 </a>
                 <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </button>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#home">Home</a></li>
@@ -33,484 +31,235 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-inner">
-                <div class="hero-copy">
-                    <p class="hero-badge">Pimlico, London</p>
-                    <h1 class="hero-headline">Pimlico Fresh</h1>
-                    <p class="hero-tagline">Café & Kitchen</p>
-                    <p class="hero-desc">Fresh food, exceptional coffee and a warm welcome — in the heart of Pimlico since 1995.</p>
-                    <div class="hero-actions">
-                        <a href="#menu" class="cta-button cta-primary">View menu</a>
-                        <a href="https://deliveroo.co.uk/menu/london/pimlico/pimlico-fresh" target="_blank" rel="noopener noreferrer" class="cta-button cta-secondary">Order on Deliveroo</a>
+        <!-- Bento Hero -->
+        <section id="home" class="bento-hero">
+            <div class="bento-hero-grid">
+                <div class="bento-card bento-card--copy">
+                    <p class="bento-badge">Pimlico, London</p>
+                    <h1 class="bento-hero-title">Pimlico Fresh</h1>
+                    <p class="bento-hero-tagline">Café & Kitchen</p>
+                    <p class="bento-hero-desc">Fresh food, exceptional coffee and a warm welcome — in the heart of Pimlico since 1995.</p>
+                    <div class="bento-hero-actions">
+                        <a href="#menu" class="btn btn-primary">View menu</a>
+                        <a href="https://deliveroo.co.uk/menu/london/pimlico/pimlico-fresh" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Order on Deliveroo</a>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <img src="assets/interior.png" alt="Pimlico Fresh café interior" class="hero-img" width="800" height="600" loading="eager" />
+                <div class="bento-card bento-card--image bento-card--span-2">
+                    <img src="assets/interior.png" alt="Pimlico Fresh café interior" width="800" height="600" loading="eager">
                 </div>
             </div>
-            <div class="hero-bg" aria-hidden="true"></div>
         </section>
 
-        <section class="value-strip" aria-label="Value proposition">
-            <div class="container">
-                <p class="value-strip-text">Fresh food & exceptional coffee in the heart of Pimlico — since 1995.</p>
+        <!-- Bento Value + CTA -->
+        <section class="bento-section bento-section--dark">
+            <div class="bento-wrap">
+                <div class="bento-grid bento-grid--2">
+                    <div class="bento-card bento-card--value">
+                        <p class="bento-value-text">Fresh food & exceptional coffee in the heart of Pimlico — since 1995.</p>
+                    </div>
+                    <div class="bento-card bento-card--cta">
+                        <a href="https://deliveroo.co.uk/menu/london/pimlico/pimlico-fresh" target="_blank" rel="noopener noreferrer" class="bento-cta-link">
+                            <span class="bento-cta-label">Order now</span>
+                            <span class="bento-cta-sub">Deliveroo</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>Welcome to <span class="brand-name">Pimlico Fresh</span></h2>
+        <!-- Bento About -->
+        <section class="bento-section" id="about">
+            <div class="bento-wrap">
+                <h2 class="bento-section-title">Welcome</h2>
+                <div class="bento-grid bento-grid--about">
+                    <div class="bento-card bento-card--text">
+                        <h3 class="bento-card-title">Welcome to <span class="brand-name">Pimlico Fresh</span></h3>
                         <p>Located in the heart of Pimlico, we serve fresh, homemade dishes and exceptional coffee. From hearty breakfasts to delightful pastries, every bite is made with care and quality ingredients.</p>
                         <p>Whether you're starting your day with our famous French Toast or enjoying an afternoon coffee with a slice of our homemade cake, Pimlico Fresh is your neighborhood spot for great food and warm hospitality.</p>
-                        <p class="quality-tagline">SUPERIOR QUALITY GOODS</p>
+                        <span class="bento-pill">Superior quality goods</span>
                     </div>
-                    <div class="about-image">
-                        <img src="assets/interior.png" alt="Pimlico Fresh counter and barista" class="about-photo about-photo--main" loading="lazy">
+                    <div class="bento-card bento-card--image bento-card--tall">
+                        <img src="assets/interior.png" alt="Pimlico Fresh counter and barista" loading="lazy">
                     </div>
-                </div>
-                <div class="about-gallery">
-                    <img src="assets/coffee-counter.png" alt="Coffee bar and La Marzocco" class="about-gallery-img" loading="lazy">
-                    <img src="assets/takeaway.png" alt="Pimlico Fresh takeaway" class="about-gallery-img" loading="lazy">
+                    <div class="bento-card bento-card--image">
+                        <img src="assets/coffee-counter.png" alt="Coffee bar and La Marzocco" loading="lazy">
+                    </div>
+                    <div class="bento-card bento-card--image">
+                        <img src="assets/takeaway.png" alt="Pimlico Fresh takeaway" loading="lazy">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="gallery" aria-label="Gallery">
-            <div class="container">
-                <h2 class="section-title">AT PIMLICO FRESH</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
+        <!-- Bento Gallery -->
+        <section class="bento-section bento-section--cream">
+            <div class="bento-wrap">
+                <h2 class="bento-section-title">At Pimlico Fresh</h2>
+                <div class="bento-grid bento-grid--gallery">
+                    <div class="bento-card bento-card--image bento-card--gallery-lg">
                         <img src="assets/storefront-street.png" alt="Pimlico Fresh street view" loading="lazy">
                     </div>
-                    <div class="gallery-item">
-                        <img src="assets/interior.png" alt="Café interior and counter" loading="lazy">
+                    <div class="bento-card bento-card--image">
+                        <img src="assets/interior.png" alt="Café interior" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="bento-card bento-card--image">
                         <img src="assets/coffee-counter.png" alt="Coffee bar" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="bento-card bento-card--image">
                         <img src="assets/takeaway.png" alt="Takeaway and branded goods" loading="lazy">
                     </div>
-                    <div class="gallery-item">
+                    <div class="bento-card bento-card--image">
                         <img src="assets/merchandise.png" alt="Pimlico Fresh merchandise" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="menu" class="menu">
-            <div class="container">
-                <h2 class="section-title">OUR MENU</h2>
-                
-                <div class="menu-category">
-                    <h3>Brunch</h3>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Homemade Beef Lasagne</h4>
-                                <span class="price">£9.50</span>
-                            </div>
-                            <p>Also available with salad</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Handmade Italian Tortellini</h4>
-                                <span class="price">£11.95</span>
-                            </div>
-                            <p>Pumpkin & ricotta</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Spinach Or Quiche Lorraine</h4>
-                                <span class="price">£10.50</span>
-                            </div>
-                            <p>With salad</p>
+        <!-- Bento Menu -->
+        <section id="menu" class="bento-section bento-section--menu">
+            <div class="bento-wrap">
+                <h2 class="bento-section-title">Our Menu</h2>
+                <div class="bento-menu">
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Brunch</h3>
+                        <div class="menu-items">
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Homemade Beef Lasagne</h4><span class="price">£9.50</span></div><p>Also available with salad</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Handmade Italian Tortellini</h4><span class="price">£11.95</span></div><p>Pumpkin & ricotta</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Spinach Or Quiche Lorraine</h4><span class="price">£10.50</span></div><p>With salad</p></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Eggs On Toast</h3>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Chilli & Bacon Eggs</h4>
-                                <span class="price">£11.50</span>
-                            </div>
-                            <p>Bacon, scrambled eggs, fresh chilli, parmesan, parsley, spring onion</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Spanish Eggs</h4>
-                                <span class="price">£11.50</span>
-                            </div>
-                            <p>Chorizo, scrambled eggs, spinach, cherry tomato, red onion, feta cheese</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Veggie Eggs</h4>
-                                <span class="price">£11.50</span>
-                            </div>
-                            <p>Scrambled eggs, red onion, cherry tomato, feta cheese, spinach</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Goats Cheese & Chives</h4>
-                                <span class="price">£11.50</span>
-                            </div>
-                            <p>Scrambled eggs, goats cheese, chives</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Green Eggs</h4>
-                                <span class="price">£10.50</span>
-                            </div>
-                            <p>Avocado, salsa, 2 fried eggs & pesto (pesto is vegan, nut & dairy free; salsa: red onion & cherry tomato mix)</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Scrambled Eggs</h4>
-                                <span class="price">£8.50</span>
-                            </div>
-                            <p>Plain, bacon or sausage, smoked salmon</p>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Eggs On Toast</h3>
+                        <div class="menu-items">
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Chilli & Bacon Eggs</h4><span class="price">£11.50</span></div><p>Bacon, scrambled eggs, fresh chilli, parmesan, parsley, spring onion</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Spanish Eggs</h4><span class="price">£11.50</span></div><p>Chorizo, scrambled eggs, spinach, cherry tomato, red onion, feta cheese</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Veggie Eggs</h4><span class="price">£11.50</span></div><p>Scrambled eggs, red onion, cherry tomato, feta cheese, spinach</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Goats Cheese & Chives</h4><span class="price">£11.50</span></div><p>Scrambled eggs, goats cheese, chives</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Green Eggs</h4><span class="price">£10.50</span></div><p>Avocado, salsa, 2 fried eggs & pesto</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Scrambled Eggs</h4><span class="price">£8.50</span></div><p>Plain, bacon or sausage, smoked salmon</p></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="menu-category">
-                    <h3>French Toast</h3>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Sweet</h4>
-                                <span class="price">£14.95</span>
-                            </div>
-                            <p>Caramelised banana, cinnamon, maple syrup & crème fraiche</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Savoury</h4>
-                                <span class="price">£14.95</span>
-                            </div>
-                            <p>Bacon, cheese & maple syrup</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Sweet & Salty</h4>
-                                <span class="price">£14.95</span>
-                            </div>
-                            <p>Banana, blueberries & bacon</p>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">French Toast</h3>
+                        <div class="menu-items">
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Sweet</h4><span class="price">£14.95</span></div><p>Caramelised banana, cinnamon, maple syrup & crème fraiche</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Savoury</h4><span class="price">£14.95</span></div><p>Bacon, cheese & maple syrup</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Sweet & Salty</h4><span class="price">£14.95</span></div><p>Banana, blueberries & bacon</p></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Things On Toast</h3>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Salmon, Cream Cheese & Avocado</h4>
-                                <span class="price">£12.50</span>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Avocado & Vegemite</h4>
-                                <span class="price">£8.95</span>
-                            </div>
-                            <p>With chilli flakes & olive oil</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Avocado, Feta & Mint</h4>
-                                <span class="price">£9.95</span>
-                            </div>
-                            <p>With toasted pinenuts</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Avocado & Salsa</h4>
-                                <span class="price">£8.95</span>
-                            </div>
-                            <p>(Vg)</p>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Things On Toast</h3>
+                        <div class="menu-items">
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Salmon, Cream Cheese & Avocado</h4><span class="price">£12.50</span></div></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Avocado & Vegemite</h4><span class="price">£8.95</span></div><p>With chilli flakes & olive oil</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Avocado, Feta & Mint</h4><span class="price">£9.95</span></div><p>With toasted pinenuts</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Avocado & Salsa</h4><span class="price">£8.95</span></div><p>(Vg)</p></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Comfort Food</h3>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Homemade Beef Lasagne</h4>
-                                <span class="price">£9.95</span>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Handmade Italian Tortellini</h4>
-                                <span class="price">£11.95</span>
-                            </div>
-                            <p>Pumpkin & ricotta, served on a bed of mixed leaves</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Beef Stew</h4>
-                                <span class="price">£12.95</span>
-                            </div>
-                            <p>With mash</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Cumberland Sausage</h4>
-                                <span class="price">£9.95</span>
-                            </div>
-                            <p>With mash, peas & gravy</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Classic Meat Pie</h4>
-                                <span class="price">£10.95</span>
-                            </div>
-                            <p>Steak or chicken pie with mash, peas & gravy</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Soup</h4>
-                                <span class="price">£6.30</span>
-                            </div>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Comfort Food</h3>
+                        <div class="menu-items">
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Homemade Beef Lasagne</h4><span class="price">£9.95</span></div></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Handmade Italian Tortellini</h4><span class="price">£11.95</span></div><p>Pumpkin & ricotta, mixed leaves</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Beef Stew</h4><span class="price">£12.95</span></div><p>With mash</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Cumberland Sausage</h4><span class="price">£9.95</span></div><p>With mash, peas & gravy</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Classic Meat Pie</h4><span class="price">£10.95</span></div><p>Steak or chicken pie with mash, peas & gravy</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Soup</h4><span class="price">£6.30</span></div></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Jacket Potatoes</h3>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Cheesy Beans</h4>
-                                <span class="price">£6.95</span>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Tuna Melt</h4>
-                                <span class="price">£7.50</span>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Smoked Salmon & Cream Cheese</h4>
-                                <span class="price">£7.95</span>
-                            </div>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Jacket Potatoes</h3>
+                        <div class="menu-items">
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Cheesy Beans</h4><span class="price">£6.95</span></div></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Tuna Melt</h4><span class="price">£7.50</span></div></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Smoked Salmon & Cream Cheese</h4><span class="price">£7.95</span></div></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Just Eggs</h3>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Scrambled</h4>
-                                <span class="price">£8.50</span>
-                            </div>
-                            <p>(Sourdough or gluten free)</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Poached</h4>
-                                <span class="price">£8.50</span>
-                            </div>
-                            <p>(Sourdough or gluten free)</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Fried</h4>
-                                <span class="price">£8.50</span>
-                            </div>
-                            <p>(Sourdough or gluten free)</p>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Just Eggs</h3>
+                        <div class="menu-items">
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Scrambled</h4><span class="price">£8.50</span></div><p>Sourdough or gluten free</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Poached</h4><span class="price">£8.50</span></div><p>Sourdough or gluten free</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Fried</h4><span class="price">£8.50</span></div><p>Sourdough or gluten free</p></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Poached Eggs On Muffin</h3>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Benedict</h4>
-                                <span class="price">£11.95</span>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Florentine</h4>
-                                <span class="price">£11.95</span>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Green</h4>
-                                <span class="price">£11.95</span>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Salmon Royale</h4>
-                                <span class="price">£12.95</span>
-                            </div>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Poached Eggs On Muffin</h3>
+                        <div class="menu-items">
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Benedict</h4><span class="price">£11.95</span></div></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Florentine</h4><span class="price">£11.95</span></div></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Green</h4><span class="price">£11.95</span></div></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Salmon Royale</h4><span class="price">£12.95</span></div></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Pimlico Breakfast</h3>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Pimlico Breakfast</h4>
-                                <span class="price">£11.95</span>
-                            </div>
-                            <p>Toast, bacon, egg, sausage, mushrooms, tomatoes, beans</p>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Pimlico Breakfast</h3>
+                        <div class="menu-items">
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Pimlico Breakfast</h4><span class="price">£11.95</span></div><p>Toast, bacon, egg, sausage, mushrooms, tomatoes, beans</p></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Others</h3>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Hot Porridge</h4>
-                                <span class="price">£5.50</span>
-                            </div>
-                            <p>Choice of 2 toppings: fruit compote/ banana/ yoghurt/ honey</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Homemade Granola</h4>
-                                <span class="price">£6.20</span>
-                            </div>
-                            <p>With greek yoghurt & fruit compote (contains nuts)</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Vegan Coconut Porridge</h4>
-                                <span class="price">£6.20</span>
-                            </div>
-                            <p>Served with walnuts & maple syrup, toasted coconut & blueberries (contains nuts)</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <div class="menu-header">
-                                <h4>Mushroom Breakfast</h4>
-                                <span class="price">£11.50</span>
-                            </div>
-                            <p>Avocado, spinach, vegan pesto, mushroom (vg)</p>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Others</h3>
+                        <div class="menu-items">
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Hot Porridge</h4><span class="price">£5.50</span></div><p>Choice of 2 toppings: fruit compote/ banana/ yoghurt/ honey</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Homemade Granola</h4><span class="price">£6.20</span></div><p>With greek yoghurt & fruit compote (contains nuts)</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Vegan Coconut Porridge</h4><span class="price">£6.20</span></div><p>Walnuts & maple syrup, toasted coconut & blueberries (contains nuts)</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><div class="menu-header"><h4>Mushroom Breakfast</h4><span class="price">£11.50</span></div><p>Avocado, spinach, vegan pesto, mushroom (vg)</p></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="menu-category">
-                    <h3>Sourdough Toasties</h3>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <h4>Toasted Sandwiches</h4>
-                            <p>Fresh daily</p>
-                        </div>
-                        <div class="menu-item">
-                            <img class="menu-item-img" alt="" loading="lazy">
-                            <h4>Brioche Buns</h4>
-                            <p>Fresh daily</p>
+                    <div class="menu-category">
+                        <h3 class="menu-category-title">Sourdough Toasties</h3>
+                        <div class="menu-items">
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><h4>Toasted Sandwiches</h4><p>Fresh daily</p></div>
+                            <div class="menu-item"><img class="menu-item-img" alt="" loading="lazy"><h4>Brioche Buns</h4><p>Fresh daily</p></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="hours" class="hours">
-            <div class="container">
-                <h2 class="section-title">OPENING HOURS</h2>
-                <div class="hours-grid">
-                    <div class="hours-item">
-                        <div class="day">Monday - Thursday</div>
-                        <div class="time">7:30 AM – 7:30 PM</div>
+        <!-- Bento Hours -->
+        <section id="hours" class="bento-section bento-section--dark">
+            <div class="bento-wrap">
+                <h2 class="bento-section-title bento-section-title--light">Opening Hours</h2>
+                <div class="bento-grid bento-grid--hours">
+                    <div class="bento-card bento-card--hours">
+                        <span class="bento-hours-day">Monday – Thursday</span>
+                        <span class="bento-hours-time">7:30 AM – 7:30 PM</span>
                     </div>
-                    <div class="hours-item">
-                        <div class="day">Friday</div>
-                        <div class="time">7:30 AM – 8:00 PM</div>
+                    <div class="bento-card bento-card--hours">
+                        <span class="bento-hours-day">Friday</span>
+                        <span class="bento-hours-time">7:30 AM – 8:00 PM</span>
                     </div>
-                    <div class="hours-item">
-                        <div class="day">Saturday - Sunday</div>
-                        <div class="time">9:00 AM – 6:00 PM</div>
+                    <div class="bento-card bento-card--hours">
+                        <span class="bento-hours-day">Saturday – Sunday</span>
+                        <span class="bento-hours-time">9:00 AM – 6:00 PM</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">VISIT US</h2>
-                <div class="contact-photos">
-                    <div class="storefront-wrap">
-                        <img src="assets/storefront-street.png" alt="Pimlico Fresh storefront at 86 Wilton Road, London" class="storefront-img" loading="lazy">
+        <!-- Bento Contact -->
+        <section id="contact" class="bento-section bento-section--cream">
+            <div class="bento-wrap">
+                <h2 class="bento-section-title">Visit Us</h2>
+                <div class="bento-grid bento-grid--contact">
+                    <div class="bento-card bento-card--image bento-card--contact-lg">
+                        <img src="assets/storefront-street.png" alt="Pimlico Fresh storefront, 86 Wilton Road" loading="lazy">
                     </div>
-                    <div class="storefront-wrap storefront-wrap--small">
-                        <img src="assets/merchandise.png" alt="Pimlico Fresh merchandise and products" class="storefront-img" loading="lazy">
+                    <div class="bento-card bento-card--image">
+                        <img src="assets/merchandise.png" alt="Pimlico Fresh merchandise" loading="lazy">
                     </div>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <h3>Location</h3>
+                    <div class="bento-card bento-card--info">
+                        <h3 class="bento-card-label">Location</h3>
                         <p>86 Wilton Road<br>London SW1V 1DN<br>United Kingdom</p>
                     </div>
-                    <div class="contact-item">
-                        <h3>Phone</h3>
+                    <div class="bento-card bento-card--info">
+                        <h3 class="bento-card-label">Phone</h3>
                         <p><a href="tel:+442079320030">+44 20 7932 0030</a></p>
                     </div>
-                    <div class="contact-item">
-                        <h3>Order Online</h3>
+                    <div class="bento-card bento-card--info bento-card--cta">
+                        <h3 class="bento-card-label">Order Online</h3>
                         <p><a href="https://deliveroo.co.uk/menu/london/pimlico/pimlico-fresh" target="_blank" rel="noopener noreferrer">Order on Deliveroo</a></p>
                     </div>
                 </div>
@@ -519,7 +268,7 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
+        <div class="footer-inner">
             <p>&copy; 2024 <span class="footer-logo">Pimlico Fresh</span>. All rights reserved.</p>
         </div>
     </footer>
@@ -527,4 +276,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

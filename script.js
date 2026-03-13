@@ -74,7 +74,7 @@ if (!prefersReducedMotion && 'IntersectionObserver' in window) {
         });
     };
     var observer = new IntersectionObserver(reveal, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
-    document.querySelectorAll('.about, .gallery, .menu .container > .section-title, .menu-category, .hours, .contact').forEach(function (el) {
+    document.querySelectorAll('.bento-section, .menu-category').forEach(function (el) {
         el.classList.add('reveal');
         observer.observe(el);
     });
