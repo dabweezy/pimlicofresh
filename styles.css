@@ -1,6 +1,6 @@
 /* ============================================
    Pimlico Fresh — Bento card design
-   Brand: #172995, cream #FFFEEB, Sunny Chunk + Outfit + DM Sans
+   Brand: #172995, cream #FFFEEB. Sunny Chunk = logo only (all caps). Outfit + DM Sans elsewhere.
    ============================================ */
 
 @font-face {
@@ -91,6 +91,7 @@ body {
     font-size: clamp(1.4rem, 2.5vw, 1.85rem);
     color: var(--brand);
     letter-spacing: 0.02em;
+    text-transform: uppercase;
     transition: opacity var(--transition);
 }
 
@@ -257,6 +258,7 @@ body {
     letter-spacing: 0.02em;
     color: var(--brand);
     margin-bottom: 0.35rem;
+    text-transform: uppercase;
 }
 
 .bento-hero-tagline {
@@ -347,13 +349,13 @@ body {
 }
 
 .bento-section-title {
-    font-family: 'Sunny Chunk', display, sans-serif;
+    font-family: 'Outfit', system-ui, sans-serif;
     font-size: clamp(2rem, 4vw, 2.75rem);
-    font-weight: normal;
+    font-weight: 700;
     color: var(--brand);
     text-align: center;
     margin-bottom: clamp(2rem, 4vw, 3rem);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
 }
 
 .bento-section-title--light {
@@ -383,8 +385,9 @@ body {
 }
 
 .bento-value-text {
-    font-family: 'Sunny Chunk', display, sans-serif;
+    font-family: 'Outfit', system-ui, sans-serif;
     font-size: clamp(1.15rem, 2vw, 1.4rem);
+    font-weight: 500;
     color: var(--white);
     text-align: center;
     margin: 0;
@@ -454,6 +457,7 @@ body {
     font-family: 'Sunny Chunk', display, sans-serif;
     font-weight: normal;
     color: var(--brand);
+    text-transform: uppercase;
 }
 
 .bento-card--text p {
@@ -467,8 +471,11 @@ body {
 }
 
 .bento-pill {
-    font-family: 'Sunny Chunk', display, sans-serif;
+    font-family: 'Outfit', system-ui, sans-serif;
     font-size: clamp(0.9rem, 1.2vw, 1rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--brand);
     background: var(--cream);
     padding: 0.5rem 1.25rem;
@@ -527,9 +534,11 @@ body {
 }
 
 .menu-category-title {
-    font-family: 'Sunny Chunk', display, sans-serif;
+    font-family: 'Outfit', system-ui, sans-serif;
     font-size: clamp(1.25rem, 1.6vw, 1.45rem);
-    font-weight: normal;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--brand);
     padding: 1.25rem 1.5rem;
     background: var(--cream);
@@ -537,32 +546,38 @@ body {
 }
 
 .menu-items {
-    padding: 1rem 1.5rem 1.25rem;
+    padding: 1.25rem 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
+    gap: 0;
 }
 
 .menu-item {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    padding-bottom: 0.85rem;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.25rem 1rem;
+    align-items: start;
+    padding: 1rem 0;
     border-bottom: 1px solid var(--gray);
 }
 
 .menu-item:last-child {
-    padding-bottom: 0;
     border-bottom: none;
+    padding-bottom: 0;
+}
+
+.menu-item:first-child {
+    padding-top: 0;
 }
 
 .menu-item-img {
     width: 72px;
-    min-width: 72px;
     height: 72px;
     object-fit: cover;
     border-radius: var(--radius-sm);
     background: var(--cream);
+    grid-row: 1 / -1;
 }
 
 .menu-item-img--missing {
@@ -575,12 +590,19 @@ body {
     visibility: hidden !important;
 }
 
+/* When image is hidden, content still starts at column 2 - use a placeholder or keep grid */
+.menu-item:has(.menu-item-img--missing) {
+    grid-template-columns: 0 1fr;
+}
+
 .menu-header {
+    grid-column: 2;
+    grid-row: 1;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-bottom: 0.25rem;
+    align-items: baseline;
+    gap: 0.75rem;
+    min-width: 0;
 }
 
 .menu-item h4 {
@@ -588,8 +610,10 @@ body {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--ink);
-    line-height: 1.3;
+    line-height: 1.35;
     flex: 1;
+    min-width: 0;
+    margin: 0;
 }
 
 .menu-item .price {
@@ -598,14 +622,23 @@ body {
     font-weight: 700;
     color: var(--brand);
     white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Item name when not inside .menu-header (e.g. Sourdough Toasties) */
+.menu-item > h4 {
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .menu-item p {
-    font-size: 0.9rem;
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 0.875rem;
     color: var(--ink-muted);
-    line-height: 1.45;
+    line-height: 1.4;
     font-style: italic;
-    margin-top: 0.15rem;
+    margin: 0.2rem 0 0 0;
 }
 
 /* Hours bento */
@@ -626,10 +659,12 @@ body {
 }
 
 .bento-hours-day {
-    font-family: 'Sunny Chunk', display, sans-serif;
+    font-family: 'Outfit', system-ui, sans-serif;
     font-size: clamp(1rem, 1.2vw, 1.15rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--brand);
-    letter-spacing: 0.03em;
 }
 
 .bento-hours-time {
@@ -663,12 +698,13 @@ body {
 }
 
 .bento-card-label {
-    font-family: 'Sunny Chunk', display, sans-serif;
+    font-family: 'Outfit', system-ui, sans-serif;
     font-size: 1.1rem;
-    font-weight: normal;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--brand);
     margin-bottom: 0.5rem;
-    letter-spacing: 0.04em;
 }
 
 .bento-card--info p {
@@ -714,6 +750,7 @@ body {
 .footer-logo {
     font-family: 'Sunny Chunk', display, sans-serif;
     font-weight: normal;
+    text-transform: uppercase;
 }
 
 /* ----- Responsive ----- */
