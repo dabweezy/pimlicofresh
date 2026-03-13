@@ -252,14 +252,17 @@ body {
 }
 
 .hero-logo {
-    font-family: 'Sunny Chunk', display, sans-serif;
-    font-size: clamp(1rem, 2.5vw, 1.35rem);
-    font-weight: normal;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.95);
-    margin: 0 0 0.5rem 0;
-    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.15);
+    margin: 0 0 0.75rem 0;
+}
+
+.hero-logo img {
+    display: block;
+    width: auto;
+    height: clamp(2.5rem, 6vw, 3.5rem);
+    max-height: 56px;
+    margin: 0 auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.2));
 }
 
 .hero-meta {
@@ -552,11 +555,11 @@ body {
 
 .expandable-gallery__item:hover,
 .expandable-gallery__item:focus-within {
-    flex: 3 1 0;
+    flex: 1.5 1 0;
 }
 
 .expandable-gallery:hover .expandable-gallery__item:not(:hover):not(:focus-within) {
-    flex: 0.6 1 0;
+    flex: 0.85 1 0;
 }
 
 .expandable-gallery__item img {
@@ -905,7 +908,7 @@ body {
 
     .expandable-gallery__item:hover,
     .expandable-gallery__item:focus-within {
-        flex: 2.2 1 0;
+        flex: 1.4 1 0;
     }
 }
 
