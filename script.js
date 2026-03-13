@@ -36,19 +36,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll effect to header
-let lastScroll = 0;
-const header = document.querySelector('.header');
+// Header scroll effect: add .scrolled for shadow (CSS handles style)
+var header = document.querySelector('.header');
+if (header) {
+    window.addEventListener('scroll', function () {
+        header.classList.toggle('scrolled', window.pageYOffset > 20);
+    });
+}
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
-    }
-    
-    lastScroll = currentScroll;
-});
+// Mobile menu toggle
+var navToggle = document.getElementById('nav-toggle');
+var navMenu = document.getElementById('nav-menu');
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function () {
+        var open = navMenu.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+    });
+    navMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            navMenu.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        });
+    });
+}
 
