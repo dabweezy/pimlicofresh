@@ -62,3 +62,21 @@ if (navToggle && navMenu) {
     });
 }
 
+// Scroll-triggered reveal (Pro Max: scroll reveal). Respect prefers-reduced-motion.
+var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    var reveal = function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+    var observer = new IntersectionObserver(reveal, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
+    document.querySelectorAll('.about, .gallery, .menu .container > .section-title, .menu-category, .hours, .contact').forEach(function (el) {
+        el.classList.add('reveal');
+        observer.observe(el);
+    });
+}
+
