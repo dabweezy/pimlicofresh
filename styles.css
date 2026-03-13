@@ -258,8 +258,8 @@ body {
 .hero-logo img {
     display: block;
     width: auto;
-    height: clamp(3.75rem, 9vw, 5.25rem);
-    max-height: 84px;
+    height: clamp(4.1rem, 10vw, 5.8rem);
+    max-height: 92px;
     margin: 0 auto;
     object-fit: contain;
     filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.2));
